@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MainNavigationMenu } from "./navigation-menu";
+import LogoIcon from '@/public/img/logos/logo.png'
 import { Heart, ShoppingBag, User } from "lucide-react";
 
 export const MainHeader = () => {
   return (
-    <header className="fixed w-full h-20 bg-white p-4 flex items-center justify-between px-80">
-      <div>
+    <header className="fixed w-full border h-20 bg-white p-4 flex items-center justify-between px-40">
+      <div >
         <Image
-          src={"/img/logos/logo.png"}
+          src={LogoIcon}
           alt="Logo"
           width={150}
           height={150}
