@@ -3,6 +3,8 @@ import TourType from "@/components/TourType";
 import WhyChoose from "@/components/WhyChooses";
 
 import { HeroSection } from "@/components/HeroSection";
+import TourType from "@/components/TourType";
+import WhyChoose from "@/components/WhyChooses";
 
 export default function Home() {
   return (
