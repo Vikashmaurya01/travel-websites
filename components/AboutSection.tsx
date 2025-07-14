@@ -11,12 +11,12 @@ export function AboutSection() {
           <Image
             src={AboutImage2}
             alt="Beautiful Destination"
-            className="rounded-xl object-cover w-[800px] h-auto"
+            className="rounded-xl object-cover "
           />
 
           {/* Tripadvisor Badge */}
         </div>
-        <div className="absolute top-1/5 left-[400px] bg-white rounded-lg shadow-lg flex flex-col items-center w-32">
+        <div className="absolute top-1/5 left-[350px] bg-white rounded-lg shadow-lg flex flex-col items-center w-32">
           <Image
             src={AboutImage1}
             alt="Tripadvisor Award"
@@ -35,14 +35,14 @@ export function AboutSection() {
       </div>
 
       {/* Right Side */}
-      <div className="space-y-6">
-        <h6 className="text-[#6cb015] uppercase tracking-wide font-semibold">
+      <div className="space-y-6 px-20">
+        <h6 className="text-[#6cb015] text-3xl uppercase tracking-wide font-semibold">
           About Us
         </h6>
-        <h2 className="text-3xl font-bold text-gray-800 leading-tight">
+        <h2 className="text-5xl font-bold text-gray-800 leading-tight">
           Moliva Travel Agency
         </h2>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-xl">
           Moliva Travel Agency offers unique and memorable tours, providing rich
           experiences in the beautiful country of Moliva. With a professional
           and dedicated team, we are committed to bringing you wonderful, safe,
@@ -51,25 +51,25 @@ export function AboutSection() {
 
         {/* Features */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-800">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-2xl" >
             <span className="text-[#6cb015]">✔</span>
             <span>
               <strong>Great travel experiences</strong>
             </span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-2xl">
             <span className="text-[#6cb015]">💰</span>
             <span>
               <strong>Competitive pricing offers</strong>
             </span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-2xl">
             <span className="text-[#6cb015]">📅</span>
             <span>
               <strong>Flexible itinerary options</strong>
             </span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-2xl">
             <span className="text-[#6cb015]">🏆</span>
             <span>
               <strong>Leading industry reputation</strong>

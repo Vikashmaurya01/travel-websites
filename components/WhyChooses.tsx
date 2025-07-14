@@ -1,7 +1,12 @@
 import Image from "next/image";
 import AboutImage1 from "@/public/img/logos/trip-best.png";
-import AboutImage2 from "@/public/img/about/a2.jpg";
-
+import AboutImage2 from "@/public/img/about/a1.jpg";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 export function WhyChoose() {
   return (
     <div className="bg-[#f7f9fc] relative py-20 px-6 md:px-80 flex flex-col md:flex-row gap-20">
@@ -11,12 +16,12 @@ export function WhyChoose() {
           <Image
             src={AboutImage2}
             alt="Beautiful Destination"
-            className="rounded-xl object-cover w-[800px] h-auto"
+            className="rounded-xl object-cover w-[700px] h-[600px]"
           />
 
           {/* Tripadvisor Badge */}
         </div>
-        <div className="absolute top-1/5 left-[400px] bg-white rounded-lg shadow-lg flex flex-col items-center w-32">
+        <div className="absolute top-1/5 left-[650px] bg-white rounded-lg shadow-lg flex flex-col items-center w-32">
           <Image
             src={AboutImage1}
             alt="Tripadvisor Award"
@@ -28,54 +33,73 @@ export function WhyChoose() {
         </div>
 
         {/* Vertical Text */}
-        <div className="absolute left-[-200px] top-[50%] -translate-y-1/2 rotate-[-90deg] text-gray-400 tracking-wide font-medium">
-          <span className="text-[#6cb015] font-bold">SINE 1993</span> -{" "}
-          <span className="font-bold">31 YEARS</span> OF EXPERIENCE
+        <div className="absolute bg-[#6cb015] left-[-100px] top-[55%] p-8 rounded-4xl">
+          <span className="text-white font-bold text-6xl">+30</span><br/>
+          <span className="text-white text-3xl"> YEARS OF <br/> EXPERIENCE </span>
         </div>
       </div>
 
       {/* Right Side */}
       <div className="space-y-6">
-        <h6 className="text-[#6cb015] uppercase tracking-wide font-semibold">
-          About Us
+        <h6 className="text-[#6cb015] uppercase text-3xl tracking-wide font-semibold">
+         Great experience
         </h6>
-        <h2 className="text-3xl font-bold text-gray-800 leading-tight">
-          Moliva Travel Agency
+        <h2 className="text-5xl font-bold text-gray-800 leading-tight">
+          Why choose us
         </h2>
         <p className="text-gray-600">
-          Moliva Travel Agency offers unique and memorable tours, providing rich
-          experiences in the beautiful country of Moliva. With a professional
-          and dedicated team, we are committed to bringing you wonderful, safe,
-          and exciting journeys, helping you explore the beauty of the world.
+          We are a leading travel agency in Moliva with many years of experience, highly rated and appreciated by tourists.
         </p>
 
         {/* Features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-800">
-          <div className="flex items-center gap-2">
-            <span className="text-[#6cb015]">✔</span>
-            <span>
-              <strong>Great travel experiences</strong>
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-[#6cb015]">💰</span>
-            <span>
-              <strong>Competitive pricing offers</strong>
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-[#6cb015]">📅</span>
-            <span>
-              <strong>Flexible itinerary options</strong>
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-[#6cb015]">🏆</span>
-            <span>
-              <strong>Leading industry reputation</strong>
-            </span>
-          </div>
-        </div>
+        <Accordion
+      type="single"
+      collapsible
+      className="w-full"
+      defaultValue="item-1"
+    >
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Leading travel agency in Moliva</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+          <p>
+             Top-rated agency in Moliva is renowned for exceptional service and unforgettable travel experiences.
+          </p>
+          <p>
+            Key features include advanced processing capabilities, and an
+            intuitive user interface designed for both beginners and experts.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Shipping Details</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+          <p>
+            We offer worldwide shipping through trusted courier partners.
+            Standard delivery takes 3-5 business days, while express shipping
+            ensures delivery within 1-2 business days.
+          </p>
+          <p>
+            All orders are carefully packaged and fully insured. Track your
+            shipment in real-time through our dedicated tracking portal.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Return Policy</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 text-balance">
+          <p>
+            We stand behind our products with a comprehensive 30-day return
+            policy. If you&apos;re not completely satisfied, simply return the
+            item in its original condition.
+          </p>
+          <p>
+            Our hassle-free return process includes free return shipping and
+            full refunds processed within 48 hours of receiving the returned
+            item.
+          </p>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
 
         {/* Button */}
         <button className="bg-[#6cb015] hover:bg-[#5aa012] text-white font-semibold px-6 py-3 rounded-full mt-4 transition-all duration-300">
